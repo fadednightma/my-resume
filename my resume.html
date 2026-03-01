@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历 - 青青 - 生产工艺/材料/检测工程师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+        :root {
+            --primary: #000000;
+            --accent: #3b82f6;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .dark {
+            --primary: #ffffff;
+            background-color: #0a0a0a;
+            color: #ededed;
+        }
+
+        /* Linear 风格渐变背景 */
+        .linear-mask {
+            background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+        }
+
+        /* 打印样式优化 */
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .card { border: 1px solid #eee !important; box-shadow: none !important; break-inside: avoid; }
+            .page-break { page-break-before: always; }
+            a { text-decoration: none !important; color: black !important; }
+        }
+
+        .skill-tag {
+            transition: all 0.2s ease;
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        background: "hsl(var(--background))",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-zinc-200">
+    
+    <div class="linear-mask fixed inset-0 pointer-events-none"></div>
+
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-200/50 bg-white/70 backdrop-blur-md dark:border-zinc-800/50 dark:bg-zinc-950/70 no-print">
+        <div class="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+            <span class="font-bold tracking-tight">RESUME</span>
+            <div class="flex items-center gap-4">
+                <button onclick="togglePrivacy()" class="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200" title="切换隐私脱敏">
+                    <i class="fas fa-eye-slash mr-1"></i>隐私模式
+                </button>
+                <button onclick="window.print()" class="text-sm text-slate-600 hover:text-slate-900 dark:text-zinc-400 dark:hover:text-white">
+                    <i class="fas fa-print"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative max-w-4xl mx-auto px-6 pt-24 pb-20">
+        
+        <header class="flex flex-col md:flex-row gap-8 items-start mb-16">
+            <div class="flex-1">
+                <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">青青</h1>
+                <p class="text-lg font-medium text-blue-600 dark:text-blue-400 mb-4">生产工艺工程师 | 材料工程师 | 检测工程师</p>
+                <div class="flex flex-wrap gap-y-2 gap-x-6 text-sm text-slate-500 dark:text-zinc-400">
+                    <span class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> 四川省达州市</span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-phone"></i> 
+                        <span class="privacy-hide">138****88</span><span class="privacy-show hidden">13800000000</span>
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> 
+                        <span class="privacy-hide">q***@example.com</span><span class="privacy-show hidden">qingqing@example.com</span>
+                    </span>
+                </div>
+            </div>
+            <div class="w-32 h-40 rounded-xl bg-slate-200 dark:bg-zinc-800 overflow-hidden border-2 border-white dark:border-zinc-700 shadow-xl no-print">
+                <div class="w-full h-full flex items-center justify-center text-slate-400">
+                    <i class="fas fa-user-circle text-5xl"></i>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                    <div class="text-blue-500 mb-2"><i class="fas fa-chart-line text-xl"></i></div>
+                    <div class="text-2xl font-bold">15% ↑</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider">生产线效率提升</div>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                    <div class="text-green-500 mb-2"><i class="fas fa-vial text-xl"></i></div>
+                    <div class="text-2xl font-bold">2 篇 SCI</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider">第一作者发表/撰写中</div>
+                </div>
+                <div class="p-4 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                    <div class="text-purple-500 mb-2"><i class="fas fa-award text-xl"></i></div>
+                    <div class="text-2xl font-bold">TOP 2%</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-wider">硕士专业成绩排名</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-slate-200 dark:bg-zinc-800"></span> 教育背景
+            </h2>
+            <div class="space-y-8 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-100 dark:before:bg-zinc-800">
+                <div class="relative pl-10">
+                    <div class="absolute left-0 top-1.5 w-[24px] h-[24px] bg-white dark:bg-zinc-950 border-2 border-blue-500 rounded-full z-10"></div>
+                    <div class="flex flex-wrap justify-between items-baseline mb-2">
+                        <h3 class="text-lg font-bold">北京工商大学 | 材料工程（硕士）</h3>
+                        <span class="text-sm font-medium text-slate-500">2023.09 - 2026.07 (预计)</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-zinc-400 space-y-1">
+                        <li>• 研究方向：无机氧化物光致发光荧光粉材料的制备与性能调控</li>
+                        <li>• 专业绩点：GPA 4.1/5 (专业前 2%) | 获新生奖学金、综合二等奖学金</li>
+                        <li>• 科研成果：发表 SCI 1 篇，1 篇在投（AOM）</li>
+                    </ul>
+                </div>
+                <div class="relative pl-10">
+                    <div class="absolute left-0 top-1.5 w-[24px] h-[24px] bg-white dark:bg-zinc-950 border-2 border-slate-300 dark:border-zinc-700 rounded-full z-10"></div>
+                    <div class="flex flex-wrap justify-between items-baseline mb-2">
+                        <h3 class="text-lg font-bold">北京工商大学 | 光电信息科学与工程（本科）</h3>
+                        <span class="text-sm font-medium text-slate-500">2019.09 - 2023.07</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 dark:text-zinc-400 space-y-1">
+                        <li>• 专业成绩：GPA 3.9/5 (专业前 5%) | 获国家励志奖学金、长安励志奖学金</li>
+                        <li>• 课程基础：半导体器件、信号与系统、C 语言、模拟电子技术等，具备光电与材料交叉背景</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-slate-200 dark:bg-zinc-800"></span> 核心技能
+            </h2>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">荧光粉制备</span>
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">XRD / SEM 表征</span>
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">烧结工艺优化</span>
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">Origin / VESTA</span>
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">机加工生产跟踪</span>
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">质量控制 (QC)</span>
+                <span class="skill-tag px-4 py-2 rounded-lg bg-white border border-slate-200 dark:bg-zinc-900 dark:border-zinc-800">OpenCV 图像处理</span>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-slate-200 dark:bg-zinc-800"></span> 实习经历
+            </h2>
+            <div class="p-6 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:shadow-lg transition-shadow">
+                <div class="flex flex-wrap justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold">坤敏工贸 | 生产与质量控制实习生</h3>
+                        <p class="text-blue-500 text-sm mt-1">生产工艺优化 · 材料检测 · 质量抽检</p>
+                    </div>
+                    <span class="text-sm font-medium bg-slate-100 dark:bg-zinc-800 px-3 py-1 rounded-full">2024.06 - 2024.09</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex gap-4">
+                        <div class="mt-1.5"><i class="fas fa-check-circle text-green-500"></i></div>
+                        <p class="text-sm text-slate-600 dark:text-zinc-400"><strong>工艺优化：</strong>参与机加工生产工艺全流程跟踪，协助进行硬度测试等基础检测，提出改进建议，<strong>支持生产线效率提升约 15%</strong>。</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="mt-1.5"><i class="fas fa-check-circle text-green-500"></i></div>
+                        <p class="text-sm text-slate-600 dark:text-zinc-400"><strong>缺陷分析：</strong>负责成品/半成品质量抽检，使用显微镜、卡尺进行缺陷分析并撰写报告，<strong>推动不良率降低 10%</strong>。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-slate-200 dark:bg-zinc-800"></span> 项目经历
+            </h2>
+            <div class="grid grid-cols-1 gap-6">
+                <div class="group p-6 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold group-hover:text-blue-500 transition-colors">荧光粉材料的开发和性能优化</h3>
+                        <button onclick="toggleDetail('project-1')" class="text-xs text-slate-400 hover:text-blue-500 no-print">详情 <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-zinc-400 mb-4 line-clamp-2">利用固相反应法制备氧化物发光材料，调节工艺参数提升发光效率，为高效白光 LED 提供候选材料。</p>
+                    <div id="project-1" class="hidden space-y-3 pt-4 border-t border-slate-100 dark:border-zinc-800">
+                        <p class="text-sm leading-relaxed text-slate-500 italic">核心成员 | 2023.09 - 至今</p>
+                        <ul class="text-sm text-slate-600 dark:text-zinc-400 space-y-2">
+                            <li>• 操作荧光光谱仪测定最佳条件，使用 Origin、VESTA 拟合分析能级跃迁关系。</li>
+                            <li>• 掌握烧结工艺优化及 XRD、SEM 表征技术。</li>
+                            <li>• 成果：部分实验结果已发表于 SCI 期刊。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="group p-6 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold group-hover:text-blue-500 transition-colors">第九届全国大学生光电设计竞赛华北区赛</h3>
+                        <button onclick="toggleDetail('project-2')" class="text-xs text-slate-400 hover:text-blue-500 no-print">详情 <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-zinc-400 mb-4 line-clamp-2">设计能自主识别并分拣垃圾的小车，实现视觉识别、路径规划、抓取分拣的完整系统。</p>
+                    <div id="project-2" class="hidden space-y-3 pt-4 border-t border-slate-100 dark:border-zinc-800">
+                        <p class="text-sm leading-relaxed text-slate-500 italic">核心成员 | 2021.03 - 2021.07</p>
+                        <ul class="text-sm text-slate-600 dark:text-zinc-400 space-y-2">
+                            <li>• 主导方案设计，利用 OpenCV 进行颜色/形状识别并引入动态阈值校准。</li>
+                            <li>• 采用状态机简化逻辑，自主搭建 9 自由度机械臂。</li>
+                            <li>• 成果：在华北区赛中荣获<strong>一等奖</strong>。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 flex items-center gap-3">
+                <span class="w-8 h-px bg-slate-200 dark:bg-zinc-800"></span> 自我评价
+            </h2>
+            <div class="p-6 rounded-2xl bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20">
+                <p class="text-sm leading-relaxed text-slate-700 dark:text-zinc-300 italic text-center px-4">
+                    “拥有扎实的材料科学与工程基础，具备实验设计、工艺优化与检测分析能力；逻辑思维清晰，注重数据分析与实验复现性；工作态度严谨，责任心强，具备良好的跨部门沟通与团队协作能力。”
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-200 dark:border-zinc-800 text-center text-slate-400 text-xs">
+        <div class="flex justify-center gap-6 mb-4 no-print">
+            <a href="#" class="hover:text-blue-500 transition-colors">GitHub</a>
+            <a href="#" class="hover:text-blue-500 transition-colors">LinkedIn</a>
+        </div>
+        <p>姓名：青青 | 版权所有 © 2026</p>
+        <p class="mt-2">此简历内容基于真实经历整理 | 网页由 AI 辅助生成</p>
+    </footer>
+
+    <script>
+        // 黑暗模式切换
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // 详情折叠切换
+        function toggleDetail(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
+        // 隐私脱敏切换
+        function togglePrivacy() {
+            document.querySelectorAll('.privacy-hide').forEach(el => el.classList.toggle('hidden'));
+            document.querySelectorAll('.privacy-show').forEach(el => el.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+</html>
